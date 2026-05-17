@@ -1,0 +1,723 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vinícius Magalhães Filho — Dev Full Stack</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+        background: #0a0a0a;
+        color: #e2e8f0;
+      }
+      .mono {
+        font-family: "JetBrains Mono", monospace;
+      }
+      .gradient-text {
+        background: linear-gradient(135deg, #38bdf8, #818cf8);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .card {
+        background: #111827;
+        border: 1px solid #1f2937;
+        border-radius: 12px;
+        transition: border-color 0.3s;
+      }
+      .card:hover {
+        border-color: #38bdf8;
+      }
+      .tag {
+        background: #0f172a;
+        border: 1px solid #1e3a5f;
+        color: #38bdf8;
+        font-size: 12px;
+        padding: 3px 10px;
+        border-radius: 999px;
+        font-family: "JetBrains Mono", monospace;
+      }
+      .tag-purple {
+        background: #1a0f2e;
+        border-color: #4c1d95;
+        color: #a78bfa;
+      }
+      .tag-green {
+        background: #0f1f14;
+        border-color: #14532d;
+        color: #4ade80;
+      }
+      .section-title {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 11px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: #38bdf8;
+        margin-bottom: 24px;
+      }
+      .timeline-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #38bdf8;
+        margin-top: 6px;
+        flex-shrink: 0;
+      }
+      .skill-bar {
+        background: #1f2937;
+        border-radius: 4px;
+        height: 4px;
+      }
+      .skill-fill {
+        background: linear-gradient(90deg, #38bdf8, #818cf8);
+        border-radius: 4px;
+        height: 4px;
+      }
+      nav a {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 12px;
+        color: #6b7280;
+        transition: color 0.2s;
+        text-decoration: none;
+      }
+      nav a:hover {
+        color: #38bdf8;
+      }
+      .hero-line {
+        height: 1px;
+        background: linear-gradient(90deg, #38bdf8, transparent);
+        margin: 24px 0;
+      }
+      .contact-link {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: #6b7280;
+        font-size: 13px;
+        text-decoration: none;
+        transition: color 0.2s;
+        font-family: "JetBrains Mono", monospace;
+      }
+      .contact-link:hover {
+        color: #38bdf8;
+      }
+    </style>
+  </head>
+  <body>
+    <nav
+      style="
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: #0a0a0aee;
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid #1f2937;
+        padding: 16px 32px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      "
+    >
+      <span class="mono" style="color: #38bdf8; font-size: 14px">vm.dev</span>
+      <div style="display: flex; gap: 24px">
+        <a href="#sobre">Sobre</a>
+        <a href="#skills">Skills</a>
+        <a href="#experiencia">Exp</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contato">Contato</a>
+      </div>
+    </nav>
+
+    <section
+      id="sobre"
+      style="padding: 80px 32px 60px; max-width: 860px; margin: 0 auto"
+    >
+      <p
+        class="mono"
+        style="color: #38bdf8; font-size: 13px; margin-bottom: 12px"
+      >
+        // olá, eu sou
+      </p>
+      <h1
+        style="
+          font-size: 48px;
+          font-weight: 600;
+          line-height: 1.1;
+          margin-bottom: 8px;
+        "
+      >
+        Vinícius <span class="gradient-text">Magalhães Filho</span>
+      </h1>
+      <p
+        class="mono"
+        style="color: #818cf8; font-size: 18px; margin-bottom: 24px"
+      >
+        Desenvolvedor Full Stack
+      </p>
+      <div class="hero-line"></div>
+      <p
+        style="
+          color: #9ca3af;
+          line-height: 1.8;
+          font-size: 15px;
+          max-width: 620px;
+        "
+      >
+        Desenvolvedor Full Stack com experiência comprovada em back-end com
+        Node.js, PHP e integrações REST, atuando em ambientes de produto reais.
+        Foco em aplicações escaláveis, banco de dados SQL Server e
+        desenvolvimento de APIs. Cursando Engenharia de Software na ETEP — São
+        José dos Campos.
+      </p>
+      <div style="display: flex; gap: 12px; margin-top: 28px; flex-wrap: wrap">
+        <span class="tag">Node.js</span>
+        <span class="tag">PHP 8</span>
+        <span class="tag tag-purple">SQL Server</span>
+        <span class="tag tag-green">Docker</span>
+        <span class="tag">REST APIs</span>
+        <span class="tag tag-purple">Laravel</span>
+      </div>
+    </section>
+
+    <section
+      id="skills"
+      style="padding: 40px 32px; max-width: 860px; margin: 0 auto"
+    >
+      <p class="section-title">// Habilidades</p>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px">
+        <div>
+          <p
+            style="
+              font-size: 12px;
+              color: #6b7280;
+              margin-bottom: 16px;
+              font-family: &quot;JetBrains Mono&quot;, monospace;
+            "
+          >
+            back-end
+          </p>
+          <div style="display: flex; flex-direction: column; gap: 14px">
+            <div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  margin-bottom: 6px;
+                "
+              >
+                <span style="font-size: 13px">Node.js</span
+                ><span class="mono" style="font-size: 12px; color: #38bdf8"
+                  >60%</span
+                >
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width: 60%"></div>
+              </div>
+            </div>
+            <div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  margin-bottom: 6px;
+                "
+              >
+                <span style="font-size: 13px">PHP 8</span
+                ><span class="mono" style="font-size: 12px; color: #38bdf8"
+                  >65%</span
+                >
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width: 65%"></div>
+              </div>
+            </div>
+            <div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  margin-bottom: 6px;
+                "
+              >
+                <span style="font-size: 13px">JavaScript</span
+                ><span class="mono" style="font-size: 12px; color: #38bdf8"
+                  >55%</span
+                >
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width: 55%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p
+            style="
+              font-size: 12px;
+              color: #6b7280;
+              margin-bottom: 16px;
+              font-family: &quot;JetBrains Mono&quot;, monospace;
+            "
+          >
+            front-end & devops
+          </p>
+          <div style="display: flex; flex-direction: column; gap: 14px">
+            <div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  margin-bottom: 6px;
+                "
+              >
+                <span style="font-size: 13px">Tailwind CSS</span
+                ><span class="mono" style="font-size: 12px; color: #818cf8"
+                  >40%</span
+                >
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width: 40%"></div>
+              </div>
+            </div>
+            <div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  margin-bottom: 6px;
+                "
+              >
+                <span style="font-size: 13px">Docker / GCP</span
+                ><span class="mono" style="font-size: 12px; color: #818cf8"
+                  >70%</span
+                >
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width: 70%"></div>
+              </div>
+            </div>
+            <div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  margin-bottom: 6px;
+                "
+              >
+                <span style="font-size: 13px">SQL Server / MySQL</span
+                ><span class="mono" style="font-size: 12px; color: #818cf8"
+                  >60%</span
+                >
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" style="width: 60%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="experiencia"
+      style="padding: 40px 32px; max-width: 860px; margin: 0 auto"
+    >
+      <p class="section-title">// experiência</p>
+      <div style="display: flex; flex-direction: column; gap: 24px">
+        <div class="card" style="padding: 24px">
+          <div style="display: flex; gap: 16px">
+            <div class="timeline-dot"></div>
+            <div style="flex: 1">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: flex-start;
+                  flex-wrap: wrap;
+                  gap: 8px;
+                "
+              >
+                <div>
+                  <p style="font-weight: 500; font-size: 15px">
+                    Desenvolvedor Full Stack
+                  </p>
+                  <p
+                    style="
+                      color: #38bdf8;
+                      font-size: 13px;
+                      font-family: &quot;JetBrains Mono&quot;, monospace;
+                    "
+                  >
+                    Engage CRM — São Paulo, SP
+                  </p>
+                </div>
+                <span class="mono" style="font-size: 11px; color: #6b7280"
+                  >mar 2025 – abr 2026</span
+                >
+              </div>
+              <ul
+                style="
+                  margin-top: 12px;
+                  color: #9ca3af;
+                  font-size: 13px;
+                  line-height: 1.9;
+                  list-style: none;
+                "
+              >
+                <li>
+                  → Desenvolvi e mantive aplicações web com foco em performance
+                  e escalabilidade
+                </li>
+                <li>→ Implementei e integrei APIs REST com Node.js e PHP</li>
+                <li>
+                  → Modelei e otimizei queries no banco de dados SQL Server
+                </li>
+                <li>→ Interfaces responsivas com Tailwind CSS</li>
+              </ul>
+              <div
+                style="
+                  display: flex;
+                  gap: 8px;
+                  margin-top: 14px;
+                  flex-wrap: wrap;
+                "
+              >
+                <span class="tag">Node.js</span><span class="tag">PHP</span
+                ><span class="tag tag-purple">SQL Server</span
+                ><span class="tag">Tailwind</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="padding: 24px; border-color: #1f2937">
+          <div style="display: flex; gap: 16px">
+            <div class="timeline-dot" style="background: #818cf8"></div>
+            <div style="flex: 1">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: flex-start;
+                  flex-wrap: wrap;
+                  gap: 8px;
+                "
+              >
+                <div>
+                  <p style="font-weight: 500; font-size: 15px">
+                    Desenvolvedor Full Stack
+                  </p>
+                  <p
+                    style="
+                      color: #818cf8;
+                      font-size: 13px;
+                      font-family: &quot;JetBrains Mono&quot;, monospace;
+                    "
+                  >
+                    AppStorm — São José dos Campos, SP
+                  </p>
+                </div>
+                <span class="mono" style="font-size: 11px; color: #6b7280"
+                  >jul – out 2024</span
+                >
+              </div>
+              <ul
+                style="
+                  margin-top: 12px;
+                  color: #9ca3af;
+                  font-size: 13px;
+                  line-height: 1.9;
+                  list-style: none;
+                "
+              >
+                <li>
+                  → Aplicações web com Framework7, Node.js, JavaScript e PHP
+                </li>
+                <li>
+                  → Otimização de performance com boas práticas de código limpo
+                </li>
+              </ul>
+              <div
+                style="
+                  display: flex;
+                  gap: 8px;
+                  margin-top: 14px;
+                  flex-wrap: wrap;
+                "
+              >
+                <span class="tag">Framework7</span
+                ><span class="tag">Node.js</span
+                ><span class="tag tag-purple">PHP</span
+                ><span class="tag tag-green">PhpMyAdmin</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="projetos"
+      style="padding: 40px 32px; max-width: 860px; margin: 0 auto"
+    >
+      <p class="section-title">// projetos</p>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px">
+        <div class="card" style="padding: 24px">
+          <div
+            style="
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              margin-bottom: 14px;
+            "
+          >
+            <span style="font-size: 20px">📋</span>
+            <p style="font-weight: 500; font-size: 15px">Projeto Agenda</p>
+          </div>
+          <p
+            style="
+              color: #9ca3af;
+              font-size: 13px;
+              line-height: 1.8;
+              margin-bottom: 16px;
+            "
+          >
+            Aplicação web de agenda de contatos com front-end, back-end Node.js
+            e banco de dados. Interface construída com EJS e CSS.
+          </p>
+          <div
+            style="
+              display: flex;
+              gap: 8px;
+              flex-wrap: wrap;
+              margin-bottom: 16px;
+            "
+          >
+            <span class="tag">Node.js</span
+            ><span class="tag tag-green">CSS 41%</span
+            ><span class="tag tag-purple">EJS 34%</span
+            ><span class="tag">ETC...</span>
+          </div>
+          <a
+            href="https://github.com/V-Magalhaes948/projeto-agenda"
+            class="contact-link"
+            style="font-size: 12px"
+            target="_blank"
+          >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"
+              />
+            </svg>
+            ver repositório →
+          </a>
+        </div>
+
+        <div class="card" style="padding: 24px">
+          <div
+            style="
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              margin-bottom: 14px;
+            "
+          >
+            <span style="font-size: 20px">👥</span>
+            <p style="font-weight: 500; font-size: 15px">
+              Desafio 01 — Gerenciamento de Funcionários
+            </p>
+          </div>
+          <p
+            style="
+              color: #9ca3af;
+              font-size: 13px;
+              line-height: 1.8;
+              margin-bottom: 16px;
+            "
+          >
+            Sistema Laravel completo com Docker para gerenciamento de
+            funcionários. Inclui cadastro, edição, visualização e exclusão com
+            perfis.
+          </p>
+          <div
+            style="
+              display: flex;
+              gap: 8px;
+              flex-wrap: wrap;
+              margin-bottom: 16px;
+            "
+          >
+            <span class="tag tag-purple">Laravel</span
+            ><span class="tag tag-green">Docker</span
+            ><span class="tag">PHP 71%</span
+            ><span class="tag tag-purple">ETC...</span>
+          </div>
+          <a
+            href="https://github.com/V-Magalhaes948/desafio-01"
+            class="contact-link"
+            style="font-size: 12px"
+            target="_blank"
+          >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"
+              />
+            </svg>
+            ver repositório →
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding: 40px 32px; max-width: 860px; margin: 0 auto">
+      <p class="section-title">// formação</p>
+      <div style="display: flex; flex-direction: column; gap: 12px">
+        <div
+          class="card"
+          style="
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+          "
+        >
+          <div>
+            <p style="font-weight: 500; font-size: 14px">
+              Bacharelado em Engenharia de Software
+            </p>
+            <p
+              style="
+                color: #6b7280;
+                font-size: 12px;
+                font-family: &quot;JetBrains Mono&quot;, monospace;
+              "
+            >
+              ETEP — São José dos Campos
+            </p>
+          </div>
+          <span class="mono" style="font-size: 11px; color: #38bdf8"
+            >2025 – 2030</span
+          >
+        </div>
+        <div
+          class="card"
+          style="
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+          "
+        >
+          <div>
+            <p style="font-weight: 500; font-size: 14px">
+              Técnico em Informática
+            </p>
+            <p
+              style="
+                color: #6b7280;
+                font-size: 12px;
+                font-family: &quot;JetBrains Mono&quot;, monospace;
+              "
+            >
+              UNIVAP Centro — São José dos Campos
+            </p>
+          </div>
+          <span class="mono" style="font-size: 11px; color: #818cf8"
+            >2022 – 2024</span
+          >
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="contato"
+      style="padding: 40px 32px 80px; max-width: 860px; margin: 0 auto"
+    >
+      <p class="section-title">// contato</p>
+      <div
+        class="card"
+        style="padding: 32px; display: flex; flex-wrap: wrap; gap: 24px"
+      >
+        <a href="mailto:vsmagalhaesfilho@gmail.com" class="contact-link">
+          <svg
+            width="16"
+            height="16"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <rect x="2" y="4" width="20" height="16" rx="2" />
+            <path d="m2 7 10 7 10-7" />
+          </svg>
+          vsmagalhaesfilho@gmail.com
+        </a>
+        <a
+          href="https://linkedin.com/in/viniciussantos-magalhaes-filho"
+          class="contact-link"
+          target="_blank"
+        >
+          <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+            />
+          </svg>
+          linkedin
+        </a>
+        <a
+          href="https://github.com/V-Magalhaes948"
+          class="contact-link"
+          target="_blank"
+        >
+          <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"
+            />
+          </svg>
+          github
+        </a>
+        <a href="tel:+5512997891759" class="contact-link">
+          <svg
+            width="16"
+            height="16"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.9a16 16 0 0 0 6.09 6.09l.86-.86a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+            />
+          </svg>
+          (12) 99789-1759
+        </a>
+      </div>
+    </section>
+
+    <footer
+      style="
+        border-top: 1px solid #1f2937;
+        padding: 20px 32px;
+        text-align: center;
+      "
+    >
+      <p class="mono" style="color: #374151; font-size: 12px">
+        // Vinícius Magalhães Filho — 2026
+      </p>
+    </footer>
+  </body>
+</html>
